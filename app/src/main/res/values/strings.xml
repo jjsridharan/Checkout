@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Checkout</string>
+    <string name="action_settings">Settings</string>
+    <string name="status_prompt">Choose Current Status</string>
+    <string name="department_prompt">Choose Your Department</string>
+    <string-array name="status">
+        <item>In Cabin</item>
+        <item>In Class</item>
+        <item>In Meeting</item>
+        <item>Out of College</item>
+    </string-array>
+    <string-array name="department">
+        <item>Aeronautical</item>
+        <item>Automobile</item>
+        <item>Computer Technology</item>
+        <item>ECE</item>
+        <item>EI</item>
+        <item>IT</item>
+        <item>Mechanical</item>
+        <item>PT</item>
+        <item>RPT</item>
+    </string-array>
+</resources>

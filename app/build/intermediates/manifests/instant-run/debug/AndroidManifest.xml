@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hi.checkout"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.hi.checkout.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.hi.checkout.AdminLogin" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StaffLogin" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.Student" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.AdminOptions" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.RegisterStaff" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.ChangeStatus" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StaffOptions" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StaffStatus" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.ChangePass" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StudentOptions" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StudentDetail" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.Announcement" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StudentChoice" >
+        </activity>
+        <activity android:name="com.example.hi.checkout.StudentAnnounce" >
+        </activity>
+
+        <provider
+            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:authorities="com.example.hi.checkout.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
