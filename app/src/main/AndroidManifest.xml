@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdminLogin" >
+        <activity android:name=".AdminLogin">
         </activity>
         <activity android:name=".StaffLogin" >
         </activity>
@@ -45,6 +45,9 @@
         <activity android:name=".StudentChoice" >
         </activity>
         <activity android:name=".StudentAnnounce" >
+        </activity>
+        <activity android:name=".AboutCheckout"
+                  android:theme="@android:style/Theme.Holo.Light.Dialog">
         </activity>
     </application>
 </manifest>

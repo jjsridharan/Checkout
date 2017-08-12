@@ -42,12 +42,15 @@ public class StaffStatus extends Activity
         Spinner spinner1 = (Spinner) findViewById(R.id.spinner4);
         String status=String.valueOf(spinner1.getSelectedItem());
         SharedPreferences sp1=this.getSharedPreferences("Login",0);
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner7);
+        Spinner spinner3 = (Spinner) findViewById(R.id.spinner8);
+        Spinner spinner4 = (Spinner) findViewById(R.id.spinner9);
         String dept=sp1.getString("depts", null);
-        //ChangeStatus s = new ChangeStatus();
-        StaffStatusChange((sp1.getString("sunm",null)),status,dept);
+        String time=String.valueOf(spinner2.getSelectedItem())+":"+String.valueOf(spinner3.getSelectedItem())+" "+String.valueOf(spinner4.getSelectedItem());;
+        StaffStatusChange((sp1.getString("sunm",null)),status,dept,time);
     }
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    public void StaffStatusChange(final String name, final String status,final String dept){
+    public void StaffStatusChange(final String name, final String status,final String dept,final String time){
 
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
             protected void onPreExecute(){}
@@ -62,6 +65,7 @@ public class StaffStatus extends Activity
                     postDataParams.put("us", name);
                     postDataParams.put("st", status);
                     postDataParams.put("de",dept);
+                    postDataParams.put("ti",time);
 
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     //    conn.setReadTimeout(15000000 /* milliseconds */);
@@ -156,6 +160,6 @@ public class StaffStatus extends Activity
         }
 
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(name,status,dept);
+        sendPostReqAsyncTask.execute(name,status,dept,time);
     }
 }

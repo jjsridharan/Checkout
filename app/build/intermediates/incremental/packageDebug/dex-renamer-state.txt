@@ -1,4 +1,4 @@
-#Sat Aug 12 16:50:02 IST 2017
+#Sat Aug 12 23:27:28 IST 2017
 base.0=F\:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4ff877046aa726c2f4585c10eefc51896c10e244
 renamed.1=classes.dex
 renamed.0=classes2.dex

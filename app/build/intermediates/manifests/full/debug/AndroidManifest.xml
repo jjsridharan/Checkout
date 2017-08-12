@@ -54,6 +54,10 @@
         </activity>
         <activity android:name="com.example.hi.checkout.StudentAnnounce" >
         </activity>
+        <activity
+            android:name="com.example.hi.checkout.AboutCheckout"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
     </application>
 
 </manifest>

@@ -16,56 +16,60 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
     }
+
     public void onBackPressed()
     {
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
     }
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings)
+        {
+            Intent myIntent = new Intent(MainActivity.this,
+                    AboutCheckout.class);
+            startActivity(myIntent);
+            return true;
+        }
+        else
         {
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
     }
+
     public void AdminLogin(View v)
     {
         Intent myIntent = new Intent(MainActivity.this,
                 AdminLogin.class);
         startActivity(myIntent);
     }
+
     public void StaffLogin(View v)
     {
         Intent myIntent = new Intent(MainActivity.this,
                 StaffLogin.class);
         startActivity(myIntent);
     }
+
     public void Student(View v)
     {
         Intent myIntent = new Intent(MainActivity.this,

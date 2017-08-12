@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -53,6 +54,7 @@ public class AdminLogin extends Activity
         super.onCreate(savedInstanceState);
         // Get the view from new_activity.xml
         setContentView(R.layout.admin_login);
+        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         SharedPreferences sp1=this.getSharedPreferences("Login",0);
         String unm=sp1.getString("Unm", null);
         String password = sp1.getString("Psw", null);

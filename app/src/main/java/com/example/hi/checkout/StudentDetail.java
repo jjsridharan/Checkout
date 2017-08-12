@@ -52,6 +52,7 @@ public class StudentDetail extends Activity {
         row1.setLayoutParams(lp1);
         TextView tv1 = new TextView(this);
         TextView t11 = new TextView(this);
+        TextView t12 = new TextView(this);
         tv1.setText("Staff Name");
         tv1.setTypeface(null, Typeface.BOLD);
         tv1.setPadding(20,30,40,50);
@@ -60,24 +61,34 @@ public class StudentDetail extends Activity {
         t11.setTypeface(null, Typeface.BOLD);
         t11.setPadding(20,30,40,50);
         t11.setBackgroundResource(R.drawable.cell_shape);
+        t12.setText("Return time to Cabin");
+        t12.setTypeface(null, Typeface.BOLD);
+        t12.setPadding(20,30,40,50);
+        t12.setBackgroundResource(R.drawable.cell_shape);
         row1.addView(tv1);
         row1.addView(t11);
+        row1.addView(t12);
         ll.addView(row1);
-        for (int i=0;i<arr.length;i+=2)
+        for (int i=0;i<arr.length;i+=3)
         {
             TableRow row = new TableRow(this);
             TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
             row.setLayoutParams(lp);
             TextView tv = new TextView(this);
             TextView t1 = new TextView(this);
+            TextView t2 = new TextView(this);
             tv.setText(arr[i]);
             tv.setPadding(20,30,40,50);
             tv.setBackgroundResource(R.drawable.cell_shape);
             t1.setText(arr[i+1]);
             t1.setPadding(20,30,40,50);
             t1.setBackgroundResource(R.drawable.cell_shape);
+            t2.setText(arr[i+2]);
+            t2.setPadding(20,30,40,50);
+            t2.setBackgroundResource(R.drawable.cell_shape);
             row.addView(tv);
             row.addView(t1);
+            row.addView(t2);
             ll.addView(row);
         }
     }
@@ -150,7 +161,7 @@ public class StudentDetail extends Activity {
 
                 Toast.makeText(getApplicationContext(), result,
                         Toast.LENGTH_LONG).show();
-               draw(result);
+                  draw(result);
 
             }
             public String getPostDataString(JSONObject params) throws Exception {

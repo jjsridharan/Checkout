@@ -1793,7 +1793,28 @@
         <item>In Class</item>
         <item>In Meeting</item>
         <item>Out of College</item>
-    </string-array><string name="department_prompt">Choose Your Department</string><string name="action_settings">Settings</string><string name="app_name">Checkout</string><string name="status_prompt">Choose Current Status</string><string-array name="department">
+    </string-array><string-array name="minute">
+        <item>00</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array><string name="department_prompt">Choose Your Department</string><string name="action_settings">Settings</string><string-array name="meridian">
+        <item>A.M</item>
+        <item>P.M</item>
+    </string-array><string name="app_name">Checkout</string><string name="status_prompt">Choose Current Status</string><string-array name="hour">
+        <item>12</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array><string-array name="department">
         <item>Aeronautical</item>
         <item>Automobile</item>
         <item>Computer Technology</item>
@@ -1817,7 +1838,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-    </style></file><file path="F:\Android\Projects\Checkout\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file><file name="student_information" path="F:\Android\Projects\Checkout\app\src\main\res\layout\student_information.xml" qualifiers="" type="layout"/><file name="student_choice" path="F:\Android\Projects\Checkout\app\src\main\res\layout\student_choice.xml" qualifiers="" type="layout"/></source><source path="F:\Android\Projects\Checkout\app\build\generated\res\rs\debug"/><source path="F:\Android\Projects\Checkout\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="F:\Android\Projects\Checkout\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/></declare-styleable><declare-styleable name="AppCompatSeekBar"><attr name="android:thumb"/><attr format="reference" name="tickMark"/><attr format="color" name="tickMarkTint"/><attr name="tickMarkTintMode">
+    </style></file><file path="F:\Android\Projects\Checkout\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file><file name="student_information" path="F:\Android\Projects\Checkout\app\src\main\res\layout\student_information.xml" qualifiers="" type="layout"/><file name="student_choice" path="F:\Android\Projects\Checkout\app\src\main\res\layout\student_choice.xml" qualifiers="" type="layout"/><file name="about_checkout" path="F:\Android\Projects\Checkout\app\src\main\res\layout\about_checkout.xml" qualifiers="" type="layout"/></source><source path="F:\Android\Projects\Checkout\app\build\generated\res\rs\debug"/><source path="F:\Android\Projects\Checkout\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="F:\Android\Projects\Checkout\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/></declare-styleable><declare-styleable name="AppCompatSeekBar"><attr name="android:thumb"/><attr format="reference" name="tickMark"/><attr format="color" name="tickMarkTint"/><attr name="tickMarkTintMode">
             
             <enum name="src_over" value="3"/>
             
