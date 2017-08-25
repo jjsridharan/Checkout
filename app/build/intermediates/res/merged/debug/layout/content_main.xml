@@ -29,7 +29,7 @@
         android:id="@+id/button"
         android:nestedScrollingEnabled="true"
         android:onClick="AdminLogin"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/button1"
         android:layout_alignEnd="@+id/textView"
         android:layout_marginBottom="53dp" />
 
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Staff"
-        android:id="@+id/button2"
+        android:id="@+id/button1"
         android:onClick="StaffLogin"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/button" />
@@ -46,9 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Student"
-        android:id="@+id/button3"
+        android:id="@+id/button2"
         android:onClick="Student"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/button1"
         android:layout_alignStart="@+id/textView"
         android:layout_marginTop="52dp" />
 

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,3 +19,4 @@
         android:gravity="fill_horizontal"
         android:text="Checkout is an app for college students who want to meet their teachers inside the campus.\nCheckout can be used to send important information to students from their teachers and department.\n\nFeel free to provide your opinion about this app @ jjsridharan@gmail.com" />
 </RelativeLayout>
+</ScrollView>

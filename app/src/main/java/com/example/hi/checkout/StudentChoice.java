@@ -11,15 +11,15 @@ import android.view.View;
 
 public class StudentChoice extends Activity
 {
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        // Get the view from new_activity.xml
         setContentView(R.layout.student_choice);
     }
+
     public void StudentDetails(View v)
     {
-        Intent myIntent = new Intent(StudentChoice.this,
-                StudentDetail.class);
+        Intent myIntent = new Intent(StudentChoice.this,StudentDetail.class);
         Bundle bundles = getIntent().getExtras();
         String dept = bundles.getString("department");
         Bundle bundle = new Bundle();
@@ -29,8 +29,7 @@ public class StudentChoice extends Activity
     }
     public void Announce(View v)
     {
-        Intent myIntent = new Intent(StudentChoice.this,
-                StudentAnnounce.class);
+        Intent myIntent = new Intent(StudentChoice.this,StudentAnnounce.class);
         Bundle bundles = getIntent().getExtras();
         String dept = bundles.getString("department");
         Bundle bundle = new Bundle();

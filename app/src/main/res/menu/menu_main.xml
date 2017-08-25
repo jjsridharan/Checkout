@@ -8,7 +8,6 @@
     </item>
     <item
         android:id="@+id/action_setting1"
-        android:title="Settings">
+        android:title="Clear Data">
     </item>
-
 </menu>

@@ -2,6 +2,7 @@ package com.example.hi.checkout;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -32,35 +33,38 @@ import javax.net.ssl.HttpsURLConnection;
  */
 public class RegisterStaff extends Activity
 {
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        // Get the view from new_activity.xml
         setContentView(R.layout.register_staff);
     }
-    public void Student(View v)
-    {
-        Button t = (Button) findViewById(R.id.button8);
-        t.setText("Student Login");
-    }
+
     public void Register(View v)
     {
-        TextView editText = (TextView)findViewById(R.id.editText5);
-        TextView editText2 = (TextView) findViewById(R.id.editText6);
-        String user = editText.getText().toString();
-        String pass = editText2.getText().toString();
+        TextView et1 = (TextView)findViewById(R.id.editText2);
+        TextView et2 = (TextView) findViewById(R.id.editText3);
+        String user = et1.getText().toString();
+        String pass = et2.getText().toString();
         RegisterStaffDetails(user,pass);
     }
+
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    private void RegisterStaffDetails(final String name, final String pass){
+    private void RegisterStaffDetails(final String name, final String pass)
+    {
+        class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
+        {
+            ProgressDialog pd = new ProgressDialog(RegisterStaff.this);
+            protected void onPreExecute()
+            {
+                pd.setMessage("Registering...");
+                pd.show();
+            }
 
-        class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
-            protected void onPreExecute(){}
-
-            protected String doInBackground(String... arg0) {
-
-                try {
-
-                    URL url = new URL("http://checkoutstaff.000webhostapp.com/register.php"); // here is your URL path
+            protected String doInBackground(String... arg0)
+            {
+                try
+                {
+                    URL url = new URL("http://checkoutstaff.000webhostapp.com/register.php");
                     SharedPreferences sp1=getSharedPreferences("Login",0);
                     JSONObject postDataParams = new JSONObject();
                     postDataParams.put("us", name);
@@ -68,97 +72,77 @@ public class RegisterStaff extends Activity
                     postDataParams.put("de",sp1.getString("dept", null));
                     postDataParams.put("status","---");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                    //    conn.setReadTimeout(15000000 /* milliseconds */);
-                    //      conn.setConnectTimeout(15000 /* milliseconds */);
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
                     conn.setDoOutput(true);
-
                     OutputStream os = conn.getOutputStream();
-                    BufferedWriter writer = new BufferedWriter(
-                            new OutputStreamWriter(os, "UTF-8"));
+                    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                     writer.write(getPostDataString(postDataParams));
-
                     writer.flush();
                     writer.close();
                     os.close();
-
                     int responseCode=conn.getResponseCode();
-
-                    if (responseCode == HttpsURLConnection.HTTP_OK) {
-
-                        BufferedReader in=new BufferedReader(
-                                new InputStreamReader(
-                                        conn.getInputStream()));
+                    if (responseCode == HttpsURLConnection.HTTP_OK)
+                    {
+                        BufferedReader in=new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         StringBuffer sb = new StringBuffer("");
                         String line="";
-
-                        while((line = in.readLine()) != null) {
-
+                        while((line = in.readLine()) != null)
+                        {
                             sb.append(line);
                             break;
                         }
-
                         in.close();
                         return sb.toString();
-
                     }
-                    else {
+                    else
+                    {
                         return new String("false : "+responseCode);
                     }
                 }
-                catch(Exception e){
+                catch(Exception e)
+                {
                     return new String("Exception: " + e.getMessage());
                 }
 
             }
 
             @Override
-            protected void onPostExecute(String result) {
-                if(result.contains("Succes"))
+            protected void onPostExecute(String result)
+            {
+                pd.dismiss();
+                if(result.contains("Success"))
                 {
-                    Toast.makeText(getApplicationContext(), "Registered Successfully!",
-                            Toast.LENGTH_LONG).show();
-                    Intent myIntent = new Intent(RegisterStaff.this,
-                            AdminOptions.class);
-                    finishAffinity();
-                    startActivity(myIntent);
+                    Toast.makeText(getApplicationContext(), "Registered Successfully!",Toast.LENGTH_LONG).show();
                 }
-                else {
-                    Toast.makeText(getApplicationContext(), "Failed to Register",
-                            Toast.LENGTH_LONG).show();
-                    Intent myIntent = new Intent(RegisterStaff.this,
-                            AdminOptions.class);
-                    finishAffinity();
-                    startActivity(myIntent);
+                else
+                {
+                    Toast.makeText(getApplicationContext(), result,Toast.LENGTH_LONG).show();
                 }
+                Intent myIntent = new Intent(RegisterStaff.this,AdminOptions.class);
+                finishAffinity();
+                startActivity(myIntent);
             }
-            public String getPostDataString(JSONObject params) throws Exception {
-
+            public String getPostDataString(JSONObject params) throws Exception
+            {
                 StringBuilder result = new StringBuilder();
                 boolean first = true;
-
                 Iterator<String> itr = params.keys();
-
-                while(itr.hasNext()){
-
+                while(itr.hasNext())
+                {
                     String key= itr.next();
                     Object value = params.get(key);
-
                     if (first)
                         first = false;
                     else
                         result.append("&");
-
                     result.append(URLEncoder.encode(key, "UTF-8"));
                     result.append("=");
                     result.append(URLEncoder.encode(value.toString(), "UTF-8"));
-
                 }
                 return result.toString();
             }
         }
-
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
         sendPostReqAsyncTask.execute(name,pass);
     }

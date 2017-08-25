@@ -9,6 +9,7 @@
         android:targetSdkVersion="24" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -30,15 +31,17 @@
         </activity>
         <activity android:name="com.example.hi.checkout.StaffLogin" >
         </activity>
-        <activity android:name="com.example.hi.checkout.Student" >
-        </activity>
-        <activity android:name="com.example.hi.checkout.AdminOptions" >
+        <activity
+            android:name="com.example.hi.checkout.AdminOptions"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity android:name="com.example.hi.checkout.RegisterStaff" >
         </activity>
         <activity android:name="com.example.hi.checkout.ChangeStatus" >
         </activity>
-        <activity android:name="com.example.hi.checkout.StaffOptions" >
+        <activity
+            android:name="com.example.hi.checkout.StaffOptions"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity android:name="com.example.hi.checkout.StaffStatus" >
         </activity>

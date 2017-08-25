@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinner10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/department"
@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fetch Details"
-        android:id="@+id/button14"
+        android:id="@+id/button16"
         android:layout_gravity="center_horizontal"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"

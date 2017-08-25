@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hi.checkout">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,18 +20,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".AdminLogin">
+
         </activity>
         <activity android:name=".StaffLogin" >
         </activity>
-        <activity android:name=".Student" >
-        </activity>
-        <activity android:name=".AdminOptions" >
+        <activity android:name=".AdminOptions"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".RegisterStaff" >
         </activity>
         <activity android:name=".ChangeStatus" >
         </activity>
-        <activity android:name=".StaffOptions" >
+        <activity android:name=".StaffOptions"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".StaffStatus" >
         </activity>

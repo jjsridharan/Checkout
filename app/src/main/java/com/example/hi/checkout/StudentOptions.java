@@ -11,18 +11,17 @@ import android.widget.Spinner;
  */
 public class StudentOptions extends Activity
 {
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        // Get the view from new_activity.xml
         setContentView(R.layout.student_options);
     }
     public void Fetch(View v)
     {
-        Spinner spinner1 = (Spinner) findViewById(R.id.spinner2);
+        Spinner spinner1 = (Spinner) findViewById(R.id.spinner10);
         Bundle bundle = new Bundle();
         bundle.putString("department",String.valueOf(spinner1.getSelectedItem()));
-        Intent myIntent = new Intent(StudentOptions.this,
-                StudentChoice.class);
+        Intent myIntent = new Intent(StudentOptions.this,StudentChoice.class);
         myIntent.putExtras(bundle);
         startActivity(myIntent);
     }

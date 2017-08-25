@@ -2,6 +2,7 @@ package com.example.hi.checkout;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -30,29 +31,30 @@ import javax.net.ssl.HttpsURLConnection;
  */
 public class ChangePass extends Activity
 {
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        // Get the view from new_activity.xml
         setContentView(R.layout.staff_pass);
     }
-    public void ChangePass(View v) {
-        TextView editText = (TextView) findViewById(R.id.editText9);
-        TextView editText2 = (TextView) findViewById(R.id.editText8);
+    public void ChangePass(View v)
+    {
+        TextView editText = (TextView) findViewById(R.id.editText8);
+        TextView editText2 = (TextView) findViewById(R.id.editText9);
         TextView editText3 = (TextView) findViewById(R.id.editText10);
         String oldpass = editText.getText().toString();
         String newpass = editText2.getText().toString();
         String newcpass = editText3.getText().toString();
         SharedPreferences sp1 = this.getSharedPreferences("Login", 0);
-        String old = sp1.getString("spw", null);
-        String user = sp1.getString("sunm",null);
-        String dept = sp1.getString("depts",null);
+        String old = sp1.getString("Spass", null);
+        String user = sp1.getString("Sname",null);
+        String dept = sp1.getString("dept",null);
         if (old.compareTo(oldpass)==0 && newcpass.compareTo(newpass)==0)
         {
             ChangePassword(user,newpass,dept);
         }
         else
         {
-            Toast.makeText(getApplicationContext(), "Invalid Old Password!",
+            Toast.makeText(getApplicationContext(), "Incorrect password!" ,
                     Toast.LENGTH_LONG).show();
             Intent myIntent = new Intent(ChangePass.this,
                     StaffOptions.class);
@@ -63,117 +65,96 @@ public class ChangePass extends Activity
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
     private void ChangePassword(final String name, final String pass,final String dept){
 
-        class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
-            protected void onPreExecute(){}
+        class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
+        {
+            ProgressDialog pd = new ProgressDialog(ChangePass.this);
+            protected void onPreExecute()
+            {
+                pd.setMessage("Updating...");
+                pd.show();
+            }
 
-            protected String doInBackground(String... arg0) {
+            protected String doInBackground(String... arg0)
+            {
 
                 try {
-
-                    URL url = new URL("http://checkoutstaff.000webhostapp.com/updatepass.php"); // here is your URL path
-
+                    URL url = new URL("http://checkoutstaff.000webhostapp.com/updatepass.php");
                     JSONObject postDataParams = new JSONObject();
                     postDataParams.put("us", name);
                     postDataParams.put("pa", pass);
                     postDataParams.put("de",dept);
-
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                    //    conn.setReadTimeout(15000000 /* milliseconds */);
-                    //      conn.setConnectTimeout(15000 /* milliseconds */);
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
                     conn.setDoOutput(true);
-
                     OutputStream os = conn.getOutputStream();
-                    BufferedWriter writer = new BufferedWriter(
-                            new OutputStreamWriter(os, "UTF-8"));
+                    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                     writer.write(getPostDataString(postDataParams));
-
                     writer.flush();
                     writer.close();
                     os.close();
-
                     int responseCode=conn.getResponseCode();
-
-                    if (responseCode == HttpsURLConnection.HTTP_OK) {
-
-                        BufferedReader in=new BufferedReader(
-                                new InputStreamReader(
-                                        conn.getInputStream()));
+                    if (responseCode == HttpsURLConnection.HTTP_OK)
+                    {
+                        BufferedReader in=new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         StringBuffer sb = new StringBuffer("");
                         String line="";
-
-                        while((line = in.readLine()) != null) {
-
+                        while((line = in.readLine()) != null)
+                        {
                             sb.append(line);
                             break;
                         }
-
                         in.close();
                         return sb.toString();
-
                     }
-                    else {
+                    else
+                    {
                         return new String("false : "+responseCode);
                     }
                 }
-                catch(Exception e){
+                catch(Exception e)
+                {
                     return new String("Exception: " + e.getMessage());
                 }
 
             }
+
             @Override
-            protected void onPostExecute(String result) {
+            protected void onPostExecute(String result)
+            {
+                pd.dismiss();
                 if(result.contains("Succes"))
                 {
-                    SharedPreferences sp=getSharedPreferences("Login", 0);
-                    SharedPreferences.Editor Ed=sp.edit();
-                    Ed.putString("sunm",name);
-                    Ed.putString("spw",pass);
-                    Ed.putString("depts",dept);
-                    Ed.commit();
-                    Toast.makeText(getApplicationContext(), "Successfully Updated!",
-                            Toast.LENGTH_LONG).show();
-                    Intent myIntent = new Intent(ChangePass.this,
-                            StaffOptions.class);
-                    finishAffinity();
-                    startActivity(myIntent);
+                    Toast.makeText(getApplicationContext(), "Successfully Updated!",Toast.LENGTH_LONG).show();
                 }
-                else {
-                    Toast.makeText(getApplicationContext(), "Failed to Update!",
-                            Toast.LENGTH_LONG).show();
-                    Intent myIntent = new Intent(ChangePass.this,
-                            StaffOptions.class);
-                    finishAffinity();
-                    startActivity(myIntent);
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Failed to Update!", Toast.LENGTH_LONG).show();
                 }
+                Intent myIntent = new Intent(ChangePass.this, StaffOptions.class);
+                finishAffinity();
+                startActivity(myIntent);
             }
-            public String getPostDataString(JSONObject params) throws Exception {
-
+            public String getPostDataString(JSONObject params) throws Exception
+            {
                 StringBuilder result = new StringBuilder();
                 boolean first = true;
-
                 Iterator<String> itr = params.keys();
-
-                while(itr.hasNext()){
-
+                while(itr.hasNext())
+                {
                     String key= itr.next();
                     Object value = params.get(key);
-
                     if (first)
                         first = false;
                     else
                         result.append("&");
-
                     result.append(URLEncoder.encode(key, "UTF-8"));
                     result.append("=");
                     result.append(URLEncoder.encode(value.toString(), "UTF-8"));
-
                 }
                 return result.toString();
             }
         }
-
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
         sendPostReqAsyncTask.execute(name,pass);
     }
