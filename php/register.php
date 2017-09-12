@@ -67,13 +67,13 @@
 					<input id="pho" name="ph" type="text" placeholder="Phone Number" required><br><br><br>
                                         <select id="dep" name="de" required>  
      					      <option value="" selected disabled>Please select Your Department</option>
-                                              <option value="AERO">AERO</option>
-                                              <option value="AUTO">AUTO</option>
-                                              <option value="CSE">CSE</option>
+                                              <option value="AERO">Aeronautical</option>
+                                              <option value="AUTO">Automobile</option>
+                                              <option value="CSE">Computer Technology</option>
                                               <option value="ECE">ECE</option>
-                                              <option value="EIE">EIE</option>
+                                              <option value="EIE">EI</option>
                                               <option value="IT">IT</option>
-                                              <option value="MECH">MECH</option>
+                                              <option value="MECH">Mechanical</option>
                                               <option value="PT">PT</option>
                                               <option value="RPT">RPT</option>
                                         </select><br><br><br>
