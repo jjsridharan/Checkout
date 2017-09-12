@@ -67,7 +67,7 @@ public class StaffLogin extends Activity
             ProgressDialog pd = new ProgressDialog(StaffLogin.this);
             protected void onPreExecute()
             {
-                pd.setMessage("Updating...");
+                pd.setMessage("Attempting Login...");
                 pd.show();
             }
 

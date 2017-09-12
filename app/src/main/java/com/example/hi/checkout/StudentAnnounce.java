@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.view.Window;
 import android.widget.ProgressBar;
@@ -25,6 +26,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -57,7 +59,9 @@ public class StudentAnnounce extends Activity
                 row.setLayoutParams(lp);
                 TextView tv = new TextView(this);
                 TextView t1 = new TextView(this);
-                tv.setText(arr[i]);
+                byte[] data = Base64.decode(arr[i], Base64.DEFAULT);
+                String text = new String(data);
+                tv.setText(text);
                 t1.setText("\n");
                 tv.setPadding(20, 30, 40, 50);
                 // tv.setBackgroundResource(R.drawable.cell_shape);
@@ -66,7 +70,7 @@ public class StudentAnnounce extends Activity
                 ll.addView(row);
                 ll.addView(row1);
             }
-            Toast.makeText(getApplicationContext(),"Updated Successfully!",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Updated Successfully!!",Toast.LENGTH_LONG).show();
         }
         catch (Exception e)
         {
@@ -112,7 +116,6 @@ public class StudentAnnounce extends Activity
                         while((line = in.readLine()) != null)
                         {
                             sb.append(line);
-                            break;
                         }
                         in.close();
                         return sb.toString();

@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,11 +39,13 @@ public class Announcement extends Activity
         setContentView(R.layout.announce);
     }
 
-    public void MakeAnnouncement(View v)
+    public void MakeAnnouncement(View v) throws Exception
     {
         TextView et = (TextView) findViewById(R.id.editText5);
         String message = et.getText().toString();
         message=message.replace("\n", " ").trim();
+        byte[] data = message.getBytes();
+        message= Base64.encodeToString(data, Base64.DEFAULT);
         SharedPreferences sp1=this.getSharedPreferences("Login",0);
         String dept=sp1.getString("dept", null);
         Announce(message,dept);
