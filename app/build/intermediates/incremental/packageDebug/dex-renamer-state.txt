@@ -1,4 +1,0 @@
-#Wed Sep 13 02:48:33 IST 2017
-base.0=F\:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=F\:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

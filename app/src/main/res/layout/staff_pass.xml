@@ -39,6 +39,7 @@
         android:text="Change Password"
         android:id="@+id/button15"
         android:layout_gravity="center_horizontal"
+        android:background="@drawable/roundbutton"
         android:onClick="ChangePass"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

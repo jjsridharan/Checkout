@@ -19,6 +19,7 @@
         android:onClick="RegisterStaff"
         android:layout_marginTop="51dp"
         android:layout_below="@+id/textView6"
+        android:background="@drawable/roundbutton"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Change Status"
         android:id="@+id/button5"
+        android:background="@drawable/roundbutton"
         android:onClick="ChangeStatus"
         android:layout_marginTop="47dp"
         android:layout_below="@+id/button4"
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:onClick="Announce"
         android:text="Announcement"
+        android:background="@drawable/roundbutton"
         android:layout_marginTop="48dp"
         android:layout_below="@+id/button5"
         android:layout_alignStart="@+id/button5" />

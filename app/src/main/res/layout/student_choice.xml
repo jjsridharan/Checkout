@@ -10,6 +10,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="127dp"
+        android:background="@drawable/roundbutton"
         android:onClick="Announce"
         android:text="Important Announcements" />
 
@@ -21,6 +22,7 @@
         android:layout_alignStart="@+id/button17"
         android:layout_below="@+id/button17"
         android:layout_marginTop="92dp"
+        android:background="@drawable/roundbutton"
         android:onClick="StudentDetails"
         android:text="Staff Status" />
 </RelativeLayout>

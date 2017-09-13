@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/button3"
+        android:background="@drawable/roundbutton"
         android:layout_gravity="center_horizontal"
         android:onClick="Login"
         android:layout_alignParentBottom="true"

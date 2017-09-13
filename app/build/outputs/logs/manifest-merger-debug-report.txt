@@ -33,6 +33,7 @@ MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\Sridh
 MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\Sridharan\.android\build-cache\e6d9c19c69bcccdffd437cd206826f02a2982a2c\output\AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\Sridharan\.android\build-cache\59756be365cbabf6d6d28ac48d42d11a463f5002\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\Sridharan\.android\build-cache\fcc5b738eb50bfe7bc2c905a159d1a30e3c0aa64\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Sridharan\.android\build-cache\4c5435ef9378c5abca52cbeaf0d90aee26b163f5\output\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:9:9-41
 	android:supportsRtl
@@ -136,6 +137,7 @@ MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\Sridha
 MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\Sridharan\.android\build-cache\c4829d32950422c7eaeb988a7e693eaf144fd0c0\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\Sridharan\.android\build-cache\59756be365cbabf6d6d28ac48d42d11a463f5002\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\Sridharan\.android\build-cache\fcc5b738eb50bfe7bc2c905a159d1a30e3c0aa64\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Sridharan\.android\build-cache\4c5435ef9378c5abca52cbeaf0d90aee26b163f5\output\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Sridharan\.android\build-cache\b9201288fe92c79247886614dd49535098dfa582\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

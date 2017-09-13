@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:text="Fetch Details"
         android:id="@+id/button16"
+        android:background="@drawable/roundbutton"
         android:layout_gravity="center_horizontal"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"

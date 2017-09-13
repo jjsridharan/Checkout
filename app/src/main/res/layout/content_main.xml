@@ -24,10 +24,11 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:text="Admin"
         android:id="@+id/button"
         android:nestedScrollingEnabled="true"
+        android:background="@drawable/roundbutton"
         android:onClick="AdminLogin"
         android:layout_above="@+id/button1"
         android:layout_alignEnd="@+id/textView"
@@ -35,19 +36,21 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:text="Staff"
         android:id="@+id/button1"
+        android:background="@drawable/roundbutton"
         android:onClick="StaffLogin"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/button" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:text="Student"
         android:id="@+id/button2"
         android:onClick="Student"
+        android:background="@drawable/roundbutton"
         android:layout_below="@+id/button1"
         android:layout_alignStart="@+id/textView"
         android:layout_marginTop="52dp" />
