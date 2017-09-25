@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\sridharan.png",
+        "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\mipmap-mdpi\\sridharan.png"
+    },
+    {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
         "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }

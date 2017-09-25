@@ -5,33 +5,37 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:inputType="textPassword"
         android:ems="10"
+        android:background="@drawable/edit_text_rounded"
         android:id="@+id/editText8"
         android:hint="Old Password"
+        android:layout_marginTop="83dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:inputType="textPassword"
         android:id="@+id/editText9"
+        android:background="@drawable/edit_text_rounded"
         android:hint="New Password"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="73dp"
         android:layout_below="@+id/editText8"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:id="@+id/editText10"
         android:inputType="textPassword"
+        android:background="@drawable/edit_text_rounded"
         android:hint="Re-enter New Password"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/editText9"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -41,8 +45,18 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/roundbutton"
         android:onClick="ChangePass"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/editText10"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="143dp" />
+        android:layout_marginTop="69dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:textSize="25dp"
+        android:text="Change Password" />
 
 </RelativeLayout>

@@ -4,6 +4,10 @@
         "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\sridharan.png",
+        "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\mipmap-hdpi\\sridharan.png"
+    },
+    {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\logout.png",
         "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\mipmap-hdpi\\logout.png"
     }

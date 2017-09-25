@@ -2701,9 +2701,10 @@ containing a value of this type.
         public static final int design_fab_background=0x7f020054;
         public static final int design_ic_visibility=0x7f020055;
         public static final int design_snackbar_background=0x7f020056;
-        public static final int navigation_empty_icon=0x7f020057;
-        public static final int notification_template_icon_bg=0x7f020059;
-        public static final int roundbutton=0x7f020058;
+        public static final int edit_text_rounded=0x7f020057;
+        public static final int navigation_empty_icon=0x7f020058;
+        public static final int notification_template_icon_bg=0x7f02005a;
+        public static final int roundbutton=0x7f020059;
     }
     public static final class id {
         public static final int action0=0x7f0d0090;
@@ -2721,10 +2722,10 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d005b;
         public static final int action_mode_bar_stub=0x7f0d005a;
         public static final int action_mode_close_button=0x7f0d003f;
-        public static final int action_setting1=0x7f0d00bb;
-        public static final int action_setting3=0x7f0d00bd;
-        public static final int action_settings=0x7f0d00ba;
-        public static final int action_settings2=0x7f0d00bc;
+        public static final int action_setting1=0x7f0d00bc;
+        public static final int action_setting3=0x7f0d00be;
+        public static final int action_settings=0x7f0d00bb;
+        public static final int action_settings2=0x7f0d00bd;
         public static final int activity_chooser_view_content=0x7f0d0040;
         public static final int add=0x7f0d001a;
         public static final int alertTitle=0x7f0d004c;
@@ -2739,11 +2740,11 @@ containing a value of this type.
         public static final int button11=0x7f0d00a6;
         public static final int button12=0x7f0d00a8;
         public static final int button13=0x7f0d00a9;
-        public static final int button14=0x7f0d00b0;
+        public static final int button14=0x7f0d00b1;
         public static final int button15=0x7f0d00ad;
-        public static final int button16=0x7f0d00b9;
-        public static final int button17=0x7f0d00b4;
-        public static final int button18=0x7f0d00b5;
+        public static final int button16=0x7f0d00ba;
+        public static final int button17=0x7f0d00b5;
+        public static final int button18=0x7f0d00b6;
         public static final int button2=0x7f0d0085;
         public static final int button3=0x7f0d0072;
         public static final int button4=0x7f0d0075;
@@ -2773,8 +2774,8 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0d008c;
         public static final int design_navigation_view=0x7f0d008b;
         public static final int disableHome=0x7f0d000e;
-        public static final int displayLinear=0x7f0d00b6;
-        public static final int displayLinear1=0x7f0d00b7;
+        public static final int displayLinear=0x7f0d00b7;
+        public static final int displayLinear1=0x7f0d00b8;
         public static final int editText=0x7f0d006f;
         public static final int editText1=0x7f0d0070;
         public static final int editText10=0x7f0d00ac;
@@ -2852,15 +2853,15 @@ containing a value of this type.
         public static final int spacer=0x7f0d0048;
         public static final int spinner=0x7f0d0071;
         public static final int spinner1=0x7f0d007c;
-        public static final int spinner10=0x7f0d00b8;
+        public static final int spinner10=0x7f0d00b9;
         public static final int spinner2=0x7f0d007f;
         public static final int spinner3=0x7f0d0080;
         public static final int spinner4=0x7f0d0081;
         public static final int spinner5=0x7f0d00a3;
-        public static final int spinner6=0x7f0d00ae;
-        public static final int spinner7=0x7f0d00af;
-        public static final int spinner8=0x7f0d00b1;
-        public static final int spinner9=0x7f0d00b2;
+        public static final int spinner6=0x7f0d00af;
+        public static final int spinner7=0x7f0d00b0;
+        public static final int spinner8=0x7f0d00b2;
+        public static final int spinner9=0x7f0d00b3;
         public static final int split_action_bar=0x7f0d0008;
         public static final int src_atop=0x7f0d001d;
         public static final int src_in=0x7f0d001e;
@@ -2875,8 +2876,9 @@ containing a value of this type.
         public static final int textSpacerNoButtons=0x7f0d0050;
         public static final int textView=0x7f0d0082;
         public static final int textView10=0x7f0d00a7;
+        public static final int textView11=0x7f0d00ae;
         public static final int textView2=0x7f0d007e;
-        public static final int textView3=0x7f0d00b3;
+        public static final int textView3=0x7f0d00b4;
         public static final int textView4=0x7f0d0073;
         public static final int textView5=0x7f0d006d;
         public static final int textView6=0x7f0d0076;
@@ -2982,6 +2984,7 @@ containing a value of this type.
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
         public static final int logout=0x7f030001;
+        public static final int sridharan=0x7f030002;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f060000;
