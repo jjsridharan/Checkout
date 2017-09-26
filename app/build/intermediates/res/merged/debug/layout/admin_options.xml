@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar1"
@@ -11,7 +12,7 @@
         android:elevation="4dp"
         app:popupTheme="@style/AppTheme.PopupOverlay"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Register Staff"
         android:id="@+id/button4"
@@ -23,7 +24,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Change Status"
         android:id="@+id/button5"
@@ -35,7 +36,7 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:onClick="Announce"
         android:text="Announcement"
@@ -50,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:textSize="25dp"
+        android:textColor="@color/maroon"
         android:text="Admin Options"
         android:layout_below="@+id/toolbar1"
         android:layout_centerHorizontal="true" />

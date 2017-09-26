@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Sridharan\\.android\\build-cache\\b9201288fe92c79247886614dd49535098dfa582\\output\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\Sridharan\\.android\\build-cache\\b9201288fe92c79247886614dd49535098dfa582\\output\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\layout\\student_information.xml",
         "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\layout\\student_information.xml"
+    },
+    {
+        "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Sridharan\\.android\\build-cache\\b9201288fe92c79247886614dd49535098dfa582\\output\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
