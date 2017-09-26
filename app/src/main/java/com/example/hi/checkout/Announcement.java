@@ -48,11 +48,12 @@ public class Announcement extends Activity
         message= Base64.encodeToString(data, Base64.DEFAULT);
         SharedPreferences sp1=this.getSharedPreferences("Login",0);
         String dept=sp1.getString("dept", null);
-        Announce(message,dept);
+        String cid=sp1.getString("cid",null);
+        Announce(message,dept,cid);
     }
 
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    public void Announce(final String message,final String dept)
+    public void Announce(final String message,final String dept,final String cid)
     {
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
         {
@@ -71,6 +72,7 @@ public class Announcement extends Activity
                     JSONObject postDataParams = new JSONObject();
                     postDataParams.put("me",message);
                     postDataParams.put("de",dept);
+                    postDataParams.put("ci",cid);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
@@ -90,7 +92,6 @@ public class Announcement extends Activity
                         while((line = in.readLine()) != null)
                         {
                             sb.append(line);
-                            break;
                         }
                         in.close();
                         return sb.toString();
@@ -111,13 +112,13 @@ public class Announcement extends Activity
             protected void onPostExecute(String result)
             {
                 pd.dismiss();
-                if(result.contains("Succes"))
+                if(result.contains("Success"))
                 {
                     Toast.makeText(getApplicationContext(), "Announcement Updated Successfully!", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), result,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Failed to Update!",Toast.LENGTH_LONG).show();
                 }
                 finish();
             }
@@ -142,6 +143,6 @@ public class Announcement extends Activity
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(message,dept);
+        sendPostReqAsyncTask.execute(message,dept,cid);
     }
 }

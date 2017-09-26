@@ -48,11 +48,12 @@ public class ChangeStatus extends Activity
         Spinner spinner4 = (Spinner) findViewById(R.id.spinner4);
         SharedPreferences sp1=this.getSharedPreferences("Login",0);
         String dept=sp1.getString("dept", null);
+        String cid=sp1.getString("cid",null);
         String time=String.valueOf(spinner2.getSelectedItem())+":"+String.valueOf(spinner3.getSelectedItem())+" "+String.valueOf(spinner4.getSelectedItem());
-        ChangeStaffStatus(user,status,dept,time);
+        ChangeStaffStatus(user,status,dept,time,cid);
     }
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    public void ChangeStaffStatus(final String name, final String status,final String dept,final String time)
+    public void ChangeStaffStatus(final String name, final String status,final String dept,final String time,final String cid)
     {
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
         {
@@ -73,6 +74,7 @@ public class ChangeStatus extends Activity
                     postDataParams.put("st", status);
                     postDataParams.put("de",dept);
                     postDataParams.put("ti",time);
+                    postDataParams.put("ci",cid);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
@@ -151,6 +153,6 @@ public class ChangeStatus extends Activity
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(name,status,dept,time);
+        sendPostReqAsyncTask.execute(name,status,dept,time,cid);
     }
 }

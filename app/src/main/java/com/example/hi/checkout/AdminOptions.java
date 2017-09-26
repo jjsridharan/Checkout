@@ -60,6 +60,7 @@ public class AdminOptions extends AppCompatActivity
                             Ed.putString("Aname",null );
                             Ed.putString("Apass",null);
                             Ed.putString("dept",null);
+                            Ed.putString("cid",null);
                             Ed.commit();
                             Intent nextActivity = new Intent(AdminOptions.this,MainActivity.class);
                             finishAffinity();

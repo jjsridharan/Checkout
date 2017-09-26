@@ -20,20 +20,14 @@ public class StudentChoice extends Activity
     public void StudentDetails(View v)
     {
         Intent myIntent = new Intent(StudentChoice.this,StudentDetail.class);
-        Bundle bundles = getIntent().getExtras();
-        String dept = bundles.getString("department");
-        Bundle bundle = new Bundle();
-        bundle.putString("department",dept);
+        Bundle bundle = getIntent().getExtras();
         myIntent.putExtras(bundle);
         startActivity(myIntent);
     }
     public void Announce(View v)
     {
         Intent myIntent = new Intent(StudentChoice.this,StudentAnnounce.class);
-        Bundle bundles = getIntent().getExtras();
-        String dept = bundles.getString("department");
-        Bundle bundle = new Bundle();
-        bundle.putString("department",dept);
+        Bundle bundle = getIntent().getExtras();
         myIntent.putExtras(bundle);
         startActivity(myIntent);
     }

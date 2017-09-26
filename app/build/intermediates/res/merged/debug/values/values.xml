@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="department">
-        <item>Aeronautical</item>
-        <item>Automobile</item>
-        <item>Computer Technology</item>
+        <item>AERO</item>
+        <item>AUTO</item>
+        <item>CT</item>
         <item>ECE</item>
         <item>EI</item>
         <item>IT</item>
-        <item>Mechanical</item>
+        <item>MECH</item>
         <item>PT</item>
         <item>RPT</item>
     </string-array>

@@ -48,9 +48,10 @@ public class ChangePass extends Activity
         String old = sp1.getString("Spass", null);
         String user = sp1.getString("Sname",null);
         String dept = sp1.getString("dept",null);
+        String cid=sp1.getString("scid",null);
         if (old.compareTo(oldpass)==0 && newcpass.compareTo(newpass)==0)
         {
-            ChangePassword(user,newpass,dept);
+            ChangePassword(user,newpass,dept,cid);
         }
         else
         {
@@ -63,7 +64,7 @@ public class ChangePass extends Activity
         }
     }
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    private void ChangePassword(final String name, final String pass,final String dept){
+    private void ChangePassword(final String name, final String pass,final String dept,final String cid){
 
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
         {
@@ -83,6 +84,7 @@ public class ChangePass extends Activity
                     postDataParams.put("us", name);
                     postDataParams.put("pa", pass);
                     postDataParams.put("de",dept);
+                    postDataParams.put("ci",cid);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
@@ -123,7 +125,7 @@ public class ChangePass extends Activity
             protected void onPostExecute(String result)
             {
                 pd.dismiss();
-                if(result.contains("Succes"))
+                if(result.contains("Success"))
                 {
                     Toast.makeText(getApplicationContext(), "Successfully Updated!",Toast.LENGTH_LONG).show();
                 }
@@ -156,6 +158,6 @@ public class ChangePass extends Activity
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(name,pass);
+        sendPostReqAsyncTask.execute(name,pass,dept,cid);
     }
 }

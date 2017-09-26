@@ -42,7 +42,8 @@ public class StudentDetail extends Activity
         setContentView(R.layout.student_detail);
         Bundle bundle = getIntent().getExtras();
         String dept = bundle.getString("department");
-        RetrieveDetails(dept);
+        String cid=bundle.getString("cid");
+        RetrieveDetails(dept,cid);
     }
     public void draw(String res)
     {
@@ -101,7 +102,7 @@ public class StudentDetail extends Activity
     }
 
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    private void RetrieveDetails(final String dept){
+    private void RetrieveDetails(final String dept,final String cid){
 
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
         {
@@ -119,6 +120,7 @@ public class StudentDetail extends Activity
                     URL url = new URL("http://checkoutstaff.000webhostapp.com/retrieve.php");
                     JSONObject postDataParams = new JSONObject();
                     postDataParams.put("de",dept);
+                    postDataParams.put("ci",cid);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
@@ -183,6 +185,6 @@ public class StudentDetail extends Activity
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(dept);
+        sendPostReqAsyncTask.execute(dept,cid);
     }
 }

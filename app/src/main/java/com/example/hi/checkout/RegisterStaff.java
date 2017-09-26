@@ -45,11 +45,14 @@ public class RegisterStaff extends Activity
         TextView et2 = (TextView) findViewById(R.id.editText3);
         String user = et1.getText().toString();
         String pass = et2.getText().toString();
-        RegisterStaffDetails(user,pass);
+        SharedPreferences sp1=getSharedPreferences("Login",0);
+        String dept=sp1.getString("dept",null);
+        String cid=sp1.getString("cid",null);
+        RegisterStaffDetails(user,pass,dept,cid);
     }
 
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
-    private void RegisterStaffDetails(final String name, final String pass)
+    private void RegisterStaffDetails(final String name, final String pass,final String dept,final String cid)
     {
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String>
         {
@@ -64,13 +67,13 @@ public class RegisterStaff extends Activity
             {
                 try
                 {
-                    URL url = new URL("http://checkoutstaff.000webhostapp.com/register.php");
-                    SharedPreferences sp1=getSharedPreferences("Login",0);
+                    URL url = new URL("http://checkoutstaff.000webhostapp.com/reg1.php");
                     JSONObject postDataParams = new JSONObject();
                     postDataParams.put("us", name);
                     postDataParams.put("pa", pass);
-                    postDataParams.put("de",sp1.getString("dept", null));
+                    postDataParams.put("de",dept);
                     postDataParams.put("status","---");
+                    postDataParams.put("cid",cid);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setDoInput(true);
@@ -144,6 +147,6 @@ public class RegisterStaff extends Activity
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(name,pass);
+        sendPostReqAsyncTask.execute(name,pass,dept,cid);
     }
 }

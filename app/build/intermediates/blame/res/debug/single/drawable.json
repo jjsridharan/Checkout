@@ -72,6 +72,10 @@
         "source": "C:\\Users\\Sridharan\\.android\\build-cache\\b9201288fe92c79247886614dd49535098dfa582\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
+        "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\line.xml",
+        "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\drawable\\line.xml"
+    },
+    {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
         "source": "C:\\Users\\Sridharan\\.android\\build-cache\\d1405b718b8a8e234711ba492cb7cbe7ffeacec0\\output\\res\\drawable\\navigation_empty_icon.xml"
     },
@@ -150,6 +154,10 @@
     {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\Users\\Sridharan\\.android\\build-cache\\b9201288fe92c79247886614dd49535098dfa582\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background4.jpg",
+        "source": "F:\\Android\\Projects\\Checkout\\app\\src\\main\\res\\drawable\\background4.jpg"
     },
     {
         "merged": "F:\\Android\\Projects\\Checkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
