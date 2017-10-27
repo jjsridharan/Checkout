@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:2:1-55:12
+ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:5:5-72
 	android:name
 		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:5:22-69
 application
-ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:6:5-54:19
+ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:6:5-56:19
 MERGED from [com.android.support:design:24.2.1] C:\Users\Sridharan\.android\build-cache\d1405b718b8a8e234711ba492cb7cbe7ffeacec0\output\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Sridharan\.android\build-cache\b9201288fe92c79247886614dd49535098dfa582\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\Sridharan\.android\build-cache\1a82f63f52ca34621e3dabb003898b7dfd34149c\output\AndroidManifest.xml:25:5-20
@@ -102,28 +102,32 @@ activity#com.example.hi.checkout.StudentOptions
 ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:41:9-42:20
 	android:name
 		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:41:19-49
-activity#com.example.hi.checkout.StudentDetail
+activity#com.example.hi.checkout.TimeTable
 ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:43:9-44:20
 	android:name
-		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:43:19-48
-activity#com.example.hi.checkout.Announcement
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:43:19-44
+activity#com.example.hi.checkout.StudentDetail
 ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:45:9-46:20
 	android:name
-		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:45:19-47
-activity#com.example.hi.checkout.StudentChoice
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:45:19-48
+activity#com.example.hi.checkout.Announcement
 ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:47:9-48:20
 	android:name
-		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:47:19-48
-activity#com.example.hi.checkout.StudentAnnounce
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:47:19-47
+activity#com.example.hi.checkout.StudentChoice
 ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:49:9-50:20
 	android:name
-		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:49:19-50
-activity#com.example.hi.checkout.AboutCheckout
-ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:51:9-53:20
-	android:theme
-		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:52:19-73
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:49:19-48
+activity#com.example.hi.checkout.StudentAnnounce
+ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:51:9-52:20
 	android:name
-		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:51:19-48
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:51:19-50
+activity#com.example.hi.checkout.AboutCheckout
+ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:53:9-55:20
+	android:theme
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:54:19-73
+	android:name
+		ADDED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml:53:19-48
 uses-sdk
 INJECTED from F:\Android\Projects\Checkout\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.2.1] C:\Users\Sridharan\.android\build-cache\d1405b718b8a8e234711ba492cb7cbe7ffeacec0\output\AndroidManifest.xml:20:5-43

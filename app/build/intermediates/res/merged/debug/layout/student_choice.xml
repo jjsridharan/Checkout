@@ -8,12 +8,12 @@
         android:id="@+id/button17"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="93dp"
         android:background="@drawable/roundbutton"
         android:onClick="Announce"
-        android:text="Important Announcements" />
+        android:text="Important Announcements"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button18"
@@ -26,4 +26,15 @@
         android:background="@drawable/roundbutton"
         android:onClick="StudentDetails"
         android:text="Staff Status" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Table"
+        android:layout_below="@+id/button18"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundbutton"
+        android:onClick="TimeTable"
+        android:layout_marginTop="84dp" />
 </RelativeLayout>

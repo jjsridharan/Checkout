@@ -49,6 +49,8 @@
         </activity>
         <activity android:name="com.example.hi.checkout.StudentOptions" >
         </activity>
+        <activity android:name="com.example.hi.checkout.TimeTable" >
+        </activity>
         <activity android:name="com.example.hi.checkout.StudentDetail" >
         </activity>
         <activity android:name="com.example.hi.checkout.Announcement" >

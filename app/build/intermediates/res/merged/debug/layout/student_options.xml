@@ -19,6 +19,7 @@
         android:id="@+id/spinner10"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:entries="@array/department"
         android:background="@drawable/edit_text_rounded"
         android:prompt="@string/department_prompt"
@@ -29,7 +30,7 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Fetch Details"
+        android:text="Verify"
         android:id="@+id/button16"
         android:background="@drawable/roundbutton"
         android:layout_gravity="center_horizontal"

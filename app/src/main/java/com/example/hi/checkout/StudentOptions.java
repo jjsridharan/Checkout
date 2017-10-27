@@ -45,7 +45,11 @@ public class StudentOptions extends Activity
         Spinner spinner1 = (Spinner) findViewById(R.id.spinner10);
         EditText et=(EditText)findViewById(R.id.editText13);
         String cid=et.getText().toString();
-        if(spinner1.getVisibility()==View.GONE)
+        if(cid.length()==0 || cid==null)
+        {
+            Toast.makeText(getApplicationContext(), "Invalid College Id!", Toast.LENGTH_SHORT).show();
+        }
+        else if(spinner1.getVisibility()==View.GONE)
         {
             Loginuser(cid,"");
         }
@@ -56,6 +60,7 @@ public class StudentOptions extends Activity
             bundle.putString("cid",et.getText().toString());
             Intent myIntent = new Intent(StudentOptions.this,StudentChoice.class);
             myIntent.putExtras(bundle);
+            finishAffinity();
             startActivity(myIntent);
         }
     }

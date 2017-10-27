@@ -31,4 +31,9 @@ public class StudentChoice extends Activity
         myIntent.putExtras(bundle);
         startActivity(myIntent);
     }
+    public void TimeTable(View v)
+    {
+        Intent myintent=new Intent(this,TimeTable.class);
+        startActivity(myintent);
+    }
 }

@@ -2731,10 +2731,10 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d005b;
         public static final int action_mode_bar_stub=0x7f0d005a;
         public static final int action_mode_close_button=0x7f0d003f;
-        public static final int action_setting1=0x7f0d00c0;
-        public static final int action_setting3=0x7f0d00c2;
-        public static final int action_settings=0x7f0d00bf;
-        public static final int action_settings2=0x7f0d00c1;
+        public static final int action_setting1=0x7f0d00c2;
+        public static final int action_setting3=0x7f0d00c4;
+        public static final int action_settings=0x7f0d00c1;
+        public static final int action_settings2=0x7f0d00c3;
         public static final int activity_chooser_view_content=0x7f0d0040;
         public static final int add=0x7f0d001a;
         public static final int alertTitle=0x7f0d004c;
@@ -2751,9 +2751,10 @@ containing a value of this type.
         public static final int button13=0x7f0d00ab;
         public static final int button14=0x7f0d00b3;
         public static final int button15=0x7f0d00af;
-        public static final int button16=0x7f0d00bd;
+        public static final int button16=0x7f0d00be;
         public static final int button17=0x7f0d00b7;
         public static final int button18=0x7f0d00b8;
+        public static final int button19=0x7f0d00b9;
         public static final int button2=0x7f0d0086;
         public static final int button3=0x7f0d0072;
         public static final int button4=0x7f0d0076;
@@ -2777,20 +2778,21 @@ containing a value of this type.
         public static final int customPanel=0x7f0d0052;
         public static final int decor_content_parent=0x7f0d005c;
         public static final int default_activity_button=0x7f0d0043;
+        public static final int description_web=0x7f0d00c0;
         public static final int design_bottom_sheet=0x7f0d0088;
         public static final int design_menu_item_action_area=0x7f0d008f;
         public static final int design_menu_item_action_area_stub=0x7f0d008e;
         public static final int design_menu_item_text=0x7f0d008d;
         public static final int design_navigation_view=0x7f0d008c;
         public static final int disableHome=0x7f0d000e;
-        public static final int displayLinear=0x7f0d00b9;
-        public static final int displayLinear1=0x7f0d00ba;
+        public static final int displayLinear=0x7f0d00ba;
+        public static final int displayLinear1=0x7f0d00bb;
         public static final int editText=0x7f0d006f;
         public static final int editText1=0x7f0d0070;
         public static final int editText10=0x7f0d00ae;
         public static final int editText11=0x7f0d0074;
         public static final int editText12=0x7f0d00a6;
-        public static final int editText13=0x7f0d00bb;
+        public static final int editText13=0x7f0d00bc;
         public static final int editText2=0x7f0d009e;
         public static final int editText3=0x7f0d009f;
         public static final int editText4=0x7f0d007c;
@@ -2865,7 +2867,7 @@ containing a value of this type.
         public static final int spacer=0x7f0d0048;
         public static final int spinner=0x7f0d0071;
         public static final int spinner1=0x7f0d007d;
-        public static final int spinner10=0x7f0d00bc;
+        public static final int spinner10=0x7f0d00bd;
         public static final int spinner2=0x7f0d0080;
         public static final int spinner3=0x7f0d0081;
         public static final int spinner4=0x7f0d0082;
@@ -2896,7 +2898,7 @@ containing a value of this type.
         public static final int textView6=0x7f0d0077;
         public static final int textView7=0x7f0d00a1;
         public static final int textView8=0x7f0d00a3;
-        public static final int textView9=0x7f0d00be;
+        public static final int textView9=0x7f0d00bf;
         public static final int text_input_password_toggle=0x7f0d0090;
         public static final int time=0x7f0d0097;
         public static final int title=0x7f0d0046;
@@ -2989,6 +2991,7 @@ containing a value of this type.
         public static final int student_information=0x7f040040;
         public static final int student_options=0x7f040041;
         public static final int support_simple_spinner_dropdown_item=0x7f040042;
+        public static final int timetable=0x7f040043;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;

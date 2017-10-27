@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".StudentOptions" >
         </activity>
+        <activity android:name=".TimeTable" >
+        </activity>
         <activity android:name=".StudentDetail" >
         </activity>
         <activity android:name=".Announcement" >

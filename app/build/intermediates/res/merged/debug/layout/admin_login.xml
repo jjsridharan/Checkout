@@ -41,7 +41,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Verify"
         android:id="@+id/button3"
         android:background="@drawable/roundbutton"
         android:layout_gravity="center_horizontal"

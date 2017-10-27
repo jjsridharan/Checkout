@@ -80,7 +80,7 @@ public class AdminLogin extends Activity
         et.setFocusable(false);
         et1.setFocusable(false);
         et2.setFocusable(false);
-        Button b=(Button)findViewById(R.id.button10);
+        Button b=(Button)findViewById(R.id.button3);
         b.setText("Login");
     }
     @TargetApi(Build.VERSION_CODES.CUPCAKE)

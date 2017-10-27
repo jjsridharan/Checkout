@@ -18,7 +18,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Verify"
         android:id="@+id/button10"
         android:background="@drawable/roundbutton"
         android:onClick="Login"
@@ -29,6 +29,7 @@
         android:id="@+id/spinner5"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:entries="@array/department"
         android:background="@drawable/edit_text_rounded"
         android:prompt="@string/department_prompt"

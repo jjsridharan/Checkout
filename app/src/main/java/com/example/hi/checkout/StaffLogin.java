@@ -82,7 +82,7 @@ public class StaffLogin extends Activity
         et.setFocusable(false);
         et1.setFocusable(false);
         et2.setFocusable(false);
-        Button b=(Button)findViewById(R.id.button3);
+        Button b=(Button)findViewById(R.id.button10);
         b.setText("Login");
     }
 
